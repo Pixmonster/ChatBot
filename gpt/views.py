@@ -8,9 +8,9 @@ def index(request):
 def openai_chat(request):
     if request.method == 'POST':
         user_message = request.POST.get('message', '')
-        openai.api_key = "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"
+        openai.api_key = "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"
         response = openai.Completion.create(
-            engine="gpt-3.5-turbo",  # Cambiar a "text-davinci-003" si estás en GPT-4
+            engine="text-davinci-003",  # Cambiar a "text-davinci-003" si estás en GPT-4
             prompt=user_message,
             max_tokens=50
         )
